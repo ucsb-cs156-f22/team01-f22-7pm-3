@@ -6,6 +6,14 @@ self := $(abspath $(lastword ${MAKEFILE_LIST}))
 run:	# Run the application.
 	mvn spring-boot:run
 
+.PHONY: test
+test:	# Test the application.
+	mvn test
+
+.PHONY: coverage
+coverage:	# Run code coverage.
+	mvn test jacoco:report
+
 .PHONY: help
 help:	# Generate a list of targets.
 	@cat ${self} | grep '^[[:alnum:]_-]*:' | \
