@@ -48,5 +48,4 @@ public class ZipCodeControllerTests {
 
     assertEquals(fakeJsonResult, responseString);
   }
-
 }
