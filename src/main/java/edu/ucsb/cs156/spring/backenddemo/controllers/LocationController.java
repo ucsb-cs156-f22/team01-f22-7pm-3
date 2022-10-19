@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiParam;
 @Api(description="Location info from nominatim.org")
 @Slf4j
 @RestController
-@RequestMapping("/api/locations/get")
+@RequestMapping("/api/locations")
 public class LocationController {
 
     ObjectMapper mapper = new ObjectMapper();
