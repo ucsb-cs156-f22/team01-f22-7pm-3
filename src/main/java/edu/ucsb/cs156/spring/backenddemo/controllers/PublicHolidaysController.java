@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiParam;
 @Slf4j
 @RestController
 @RequestMapping("/api/publicholidays")
-public class PublicHolidayController {
+public class PublicHolidaysController {
 
 	ObjectMapper mapper = new ObjectMapper();
 
@@ -30,7 +30,7 @@ public class PublicHolidayController {
 
 	@ApiOperation(value = "Get public holidays for a given year and country")
 	@GetMapping("/get")
-	public ResponseEntity<String> getPublicHoliday(
+	public ResponseEntity<String> getPublicHolidays(
 		@ApiParam("2 letter country code, e.g. US, MX, CN") @RequestParam String countryCode,
 		@ApiParam("year, e.g. 2012") @RequestParam String year
 	) throws JsonProcessingException {

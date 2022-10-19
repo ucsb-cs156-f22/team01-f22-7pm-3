@@ -22,8 +22,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
-@WebMvcTest(value = PublicHolidayController.class)
-public class PublicHolidayControllerTests {
+@WebMvcTest(value = PublicHolidaysController.class)
+public class PublicHolidaysControllerTests {
   private ObjectMapper mapper = new ObjectMapper();
   @Autowired
   private MockMvc mockMvc;
@@ -32,7 +32,7 @@ public class PublicHolidayControllerTests {
 
 
   @Test
-  public void test_getPublicHoliday() throws Exception {
+  public void test_getPublicHolidays() throws Exception {
   
     String fakeJsonResult="{ \"fake\" : \"result\" }";
     String country = "US";
