@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiParam;
 @Api(description="Info from Reddit.com")
 @Slf4j
 @RestController
-@RequestMapping("/api/reddit/get")
+@RequestMapping("/api/reddit")
 public class RedditController {
 
     ObjectMapper mapper = new ObjectMapper();

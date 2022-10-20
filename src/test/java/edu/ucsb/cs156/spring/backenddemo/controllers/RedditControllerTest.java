@@ -31,7 +31,7 @@ public class RedditControllerTest {
     String subreddit = "UCSantaBarbara";
     when(mockRedditQueryService.getJSON(eq(subreddit))).thenReturn(fakeJsonResult);
 
-    String url = String.format("/api/reddit/get/get?subreddit=%s", subreddit);
+    String url = String.format("/api/reddit/get?subreddit=%s", subreddit);
 
     MvcResult response = mockMvc
         .perform( get(url).contentType("application/json"))
